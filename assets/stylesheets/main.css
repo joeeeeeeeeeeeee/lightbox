@@ -7,17 +7,59 @@ html {
 body{
   font-family: "Arial";
   color: #555;
-  line-height: 20px;
-  font-size: 18px;
+}
+h1{
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 30px 10px;
+}
+.gallery{
+  margin: 20px auto;
+  width: 290px;
   display: grid;
-  grid-template-columns: repeat(12 83px);
-  grid-auto-rows: 83px; 
+  grid-template-columns: 290px;
+  grid-auto-rows: auto;
 }
-.gallery_item{
-  object-fit: cover; 
+/*for non mobiles */
+@media only screen and (min-width: 620px){
+  h1{
+    font-size: 30px;
+    letter-spacing: 4px;
+  }
+  .gallery{
+    width: 620px;
+    grid-gap: 40px;
+    grid-template-columns: 290px 290px;
+  }
+}
+/*for massive screens */
+@media only screen and (min-width: 1440px){
+  h1{
+    font-size: 40px;
+  }
+  .gallery{
+    width: 950px;
+    grid-template-columns: 290px 290px 290px;
+  }
+}
+.gallery > *{
+  text-align: center;
+  align-self: center;
 }
 
+.gallery_image{
+  height: auto;
+  width: auto;
+  max-height: 290px;
+  max-width: 290px;
 
+}
+
+figcaption{
+  border-bottom: 1px solid #eee;
+  padding: 20px 10px;
+}
 
 
 
